@@ -564,3 +564,73 @@ html[data-theme="dark"] .btn--primary{ background:#fff; color:#111; }
   html{ scroll-behavior: auto; }
   *{ transition: none !important; animation: none !important; }
 }
+
+/* Mobile: show menu inline (no off-canvas) */
+@media (max-width: 899.98px){
+  .nav__menu{
+    position: static;
+    inset: auto;
+    transform: none;
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    display: block;
+  }
+  .nav__menu-head{ display:none; }
+  .nav__toggle{ display:none; } /* optional: hide hamburger */
+}
+/* ===========================
+   FIX: Mobile menu content not visible
+   Paste at END of style.css
+=========================== */
+@media (max-width: 899.98px){
+
+  .nav__menu{
+    z-index: 9999 !important;
+    background: var(--bg) !important;
+    color: var(--text) !important;
+
+    /* ensure full height + scroll */
+    height: 100dvh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+
+    /* important: keep layout stable */
+    display: grid !important;
+    align-content: start !important;
+    gap: 14px !important;
+  }
+
+  /* make sure these sections are not collapsing */
+  .nav__links,
+  .nav__actions{
+    display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .nav__links{
+    margin: 0 !important;
+    padding: 0 6px !important;
+    list-style: none !important;
+  }
+
+  .nav__actions{
+    margin-top: 10px !important;
+    padding: 0 6px 18px !important;
+  }
+
+  /* keep search visible */
+  .search{
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  /* menu head stays top */
+  .nav__menu-head{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 2 !important;
+    background: var(--bg) !important;
+  }
+}
