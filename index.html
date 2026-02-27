@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UrbanWear — Luxury minimal clothing for modern street style." />
+  <title>UrbanWear | Modern Minimal Clothing</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <!-- Announcement Bar -->
+  <div class="announce" role="region" aria-label="Announcement" data-announce>
+    <div class="container announce__inner">
+      <p class="announce__text">
+        Free shipping on orders over ₹2999 • Use code <strong>URBAN10</strong> for 10% off
+      </p>
+      <button class="announce__close" type="button" aria-label="Dismiss announcement" data-announce-close>
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="./index.html" aria-label="UrbanWear Home">
+        <span class="logo__mark">Urban</span><span class="logo__wear">Wear</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false" data-nav-toggle>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu" data-nav-menu>
+        <div class="nav__menu-head">
+          <strong class="nav__menu-title">Menu</strong>
+          <button class="nav__close" type="button" aria-label="Close menu" data-nav-close>✕</button>
+        </div>
+
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="./shop.html">Shop</a></li>
+          <li><a class="nav__link" href="./shop.html?category=New">New Arrivals</a></li>
+          <li><a class="nav__link" href="./shop.html?category=Best">Best Sellers</a></li>
+          <li><a class="nav__link" href="#newsletter">Newsletter</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <form class="search" role="search" action="./shop.html" method="get">
+            <label class="sr-only" for="q">Search products</label>
+            <input class="search__input" id="q" name="q" type="search" placeholder="Search..." autocomplete="off" />
+            <button class="search__btn" type="submit" aria-label="Search">⌕</button>
+          </form>
+
+          <div class="nav__actions-row">
+            <button class="icon-btn" type="button" aria-label="Toggle theme" data-theme-toggle>
+              <span class="icon-btn__icon" aria-hidden="true">◐</span>
+            </button>
+
+            <a class="icon-btn" href="./wishlist.html" aria-label="Wishlist">
+              <span class="icon-btn__icon" aria-hidden="true">♡</span>
+              <span class="badge" data-wishlist-count>0</span>
+            </a>
+
+            <a class="icon-btn" href="./cart.html" aria-label="Cart">
+              <span class="icon-btn__icon" aria-hidden="true">🛒</span>
+              <span class="badge" data-cart-count>0</span>
+            </a>
+
+            <a class="btn btn--ghost nav__auth" href="./login.html" data-auth-link>Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Luxury Minimal • Urban Essentials</p>
+          <h1 class="hero__title">
+            Elevate your everyday with <span class="gold">UrbanWear</span>.
+          </h1>
+          <p class="hero__subtitle">
+            Premium basics, clean tailoring, and modern silhouettes inspired by global street style.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="./shop.html">Shop Now</a>
+            <a class="btn btn--outline" href="./shop.html?category=New">New Arrivals</a>
+          </div>
+
+          <ul class="hero__meta" role="list">
+            <li><strong>7-day</strong> easy returns</li>
+            <li><strong>Secure</strong> checkout</li>
+            <li><strong>Premium</strong> fabrics</li>
+          </ul>
+        </div>
+
+        <div class="hero__media" aria-hidden="true">
+          <div class="hero__image" role="img" aria-label="UrbanWear collection banner"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">Featured Categories</h2>
+          <p class="section__desc">Curated staples for a refined wardrobe.</p>
+        </header>
+
+        <div class="grid grid--cats">
+          <a class="cat-card cat-card--tees" href="./shop.html?category=T-Shirts">
+            <div class="cat-card__media" aria-hidden="true"></div>
+            <div class="cat-card__body">
+              <h3 class="cat-card__title">T-Shirts</h3>
+              <span class="cat-card__link">Explore →</span>
+            </div>
+          </a>
+
+          <a class="cat-card cat-card--jackets" href="./shop.html?category=Jackets">
+            <div class="cat-card__media" aria-hidden="true"></div>
+            <div class="cat-card__body">
+              <h3 class="cat-card__title">Jackets</h3>
+              <span class="cat-card__link">Explore →</span>
+            </div>
+          </a>
+
+          <a class="cat-card cat-card--bottomwear" href="./shop.html?category=Bottomwear">
+            <div class="cat-card__media" aria-hidden="true"></div>
+            <div class="cat-card__body">
+              <h3 class="cat-card__title">Bottomwear</h3>
+              <span class="cat-card__link">Explore →</span>
+            </div>
+          </a>
+
+          <a class="cat-card cat-card--footwear" href="./shop.html?category=Footwear">
+            <div class="cat-card__media" aria-hidden="true"></div>
+            <div class="cat-card__body">
+              <h3 class="cat-card__title">Footwear</h3>
+              <span class="cat-card__link">Explore →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head section__head--row">
+          <div>
+            <h2 class="section__title">Best Sellers</h2>
+            <p class="section__desc">Popular picks loved for fit, feel, and finish.</p>
+          </div>
+          <a class="link" href="./shop.html?category=Best">View all</a>
+        </header>
+
+        <div class="grid grid--products" data-best-sellers>
+          <!-- JS renders -->
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head section__head--row">
+          <div>
+            <h2 class="section__title">New Arrivals</h2>
+            <p class="section__desc">Fresh drops—minimal, premium, essential.</p>
+          </div>
+          <a class="link" href="./shop.html?category=New">View all</a>
+        </header>
+
+        <div class="grid grid--products" data-new-arrivals>
+          <!-- JS renders -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo" aria-label="Promotion">
+      <div class="container promo__inner">
+        <div class="promo__content">
+          <h2 class="promo__title">Mid-Season Edit</h2>
+          <p class="promo__text">Neutral tones. Clean silhouettes. Limited stock.</p>
+          <a class="btn btn--primary" href="./shop.html">Shop the Edit</a>
+        </div>
+        <div class="promo__media" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title">What Customers Say</h2>
+          <p class="section__desc">Trusted by urban wardrobes across India.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="quote">
+            <p class="quote__text">“Clean design, premium feel. The hoodie fits perfectly—minimal but luxe.”</p>
+            <footer class="quote__meta"><strong>Riya</strong> <span>• Mumbai</span></footer>
+          </article>
+
+          <article class="quote">
+            <p class="quote__text">“The tailoring is sharp and modern. Looks expensive without trying hard.”</p>
+            <footer class="quote__meta"><strong>Arjun</strong> <span>• Delhi</span></footer>
+          </article>
+
+          <article class="quote">
+            <p class="quote__text">“Fast delivery, great packaging. The neutral palette is exactly my vibe.”</p>
+            <footer class="quote__meta"><strong>Meera</strong> <span>• Bengaluru</span></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section" id="newsletter">
+      <div class="container newsletter">
+        <div class="newsletter__copy">
+          <h2 class="section__title">Join our newsletter</h2>
+          <p class="section__desc">New drops, exclusive codes, and style edits—straight to your inbox.</p>
+        </div>
+
+        <form class="newsletter__form" data-newsletter-form>
+          <label class="sr-only" for="email">Email address</label>
+          <input class="input" id="email" type="email" placeholder="you@example.com" required />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--footer" href="./index.html">
+          <span class="logo__mark">Urban</span><span class="logo__wear">Wear</span>
+        </a>
+        <p class="footer__text">
+          Luxury minimal clothing—built for modern city life. Clean fits, premium feel.
+        </p>
+        <div class="footer__social" aria-label="Social links">
+          <a class="chip" href="#" aria-label="Instagram">IG</a>
+          <a class="chip" href="#" aria-label="Twitter">X</a>
+          <a class="chip" href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Shop</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="./shop.html?category=New">New Arrivals</a></li>
+          <li><a href="./shop.html?category=Best">Best Sellers</a></li>
+          <li><a href="./shop.html?category=Jackets">Jackets</a></li>
+          <li><a href="./shop.html?category=Accessories">Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Support</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="./profile.html">My Account</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+          <li><a href="./checkout.html">Checkout</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Legal</h3>
+        <ul class="footer__links" role="list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span data-year></span> UrbanWear. All rights reserved.</p>
+      <p class="footer__mini">Made with minimal luxury.</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-wrap" aria-live="polite" aria-atomic="true" data-toast-wrap></div>
+
+  <!-- Back to top -->
+  <button class="backtop" type="button" aria-label="Back to top" data-backtop>↑</button>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

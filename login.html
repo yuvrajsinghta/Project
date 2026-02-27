@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | UrbanWear</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/auth.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="./index.html" aria-label="UrbanWear Home">
+        <span class="logo__mark">Urban</span><span class="logo__wear">Wear</span>
+      </a>
+
+      <div class="nav__actions-row">
+        <button class="icon-btn" type="button" aria-label="Toggle theme" data-theme-toggle>
+          <span class="icon-btn__icon" aria-hidden="true">◐</span>
+        </button>
+        <a class="btn btn--outline" href="./signup.html">Signup</a>
+        <a class="btn btn--primary" href="./shop.html">Shop</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth">
+    <div class="container auth__wrap">
+      <section class="auth__card">
+        <div class="auth__head">
+          <div>
+            <h1 class="auth__title">Welcome Back</h1>
+            <p class="auth__sub">Login to view profile & manage orders.</p>
+          </div>
+        </div>
+
+        <form class="auth__grid" data-login-form>
+          <div class="field">
+            <label class="field__label" for="li_email">Email</label>
+            <input class="input" id="li_email" type="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="li_password">Password</label>
+            <input class="input" id="li_password" type="password" required placeholder="Your password" />
+          </div>
+
+          <div class="auth__actions">
+            <button class="btn btn--primary" type="submit">Login</button>
+            <a class="btn btn--outline" href="./signup.html">New here? Create Account</a>
+          </div>
+
+          <p class="auth__fine">Frontend demo only. Credentials are verified locally.</p>
+        </form>
+      </section>
+
+      <section class="auth__card">
+        <h2 class="auth__title" style="font-size:22px;">New Arrivals</h2>
+        <p class="auth__sub" style="margin-top:6px;">
+          Fresh drops every week. Minimal silhouettes + premium feel.
+        </p>
+
+        <a class="btn btn--outline" href="./shop.html?category=New" style="margin-top:14px;">Shop New</a>
+        <a class="btn btn--outline" href="./shop.html?category=Best" style="margin-top:10px;">Best Sellers</a>
+      </section>
+    </div>
+  </main>
+
+  <div class="toast-wrap" aria-live="polite" aria-atomic="true" data-toast-wrap></div>
+  <button class="backtop" type="button" aria-label="Back to top" data-backtop>↑</button>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>

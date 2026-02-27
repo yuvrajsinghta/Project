@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist | UrbanWear</title>
+  <meta name="description" content="Your UrbanWear wishlist." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/wishlist.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="./index.html" aria-label="UrbanWear Home">
+        <span class="logo__mark">Urban</span><span class="logo__wear">Wear</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false" data-nav-toggle>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu" data-nav-menu>
+        <div class="nav__menu-head">
+          <strong class="nav__menu-title">Menu</strong>
+          <button class="nav__close" type="button" aria-label="Close menu" data-nav-close>✕</button>
+        </div>
+
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="./index.html">Home</a></li>
+          <li><a class="nav__link" href="./shop.html">Shop</a></li>
+          <li><a class="nav__link" href="./cart.html">Cart</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <form class="search" role="search" action="./shop.html" method="get">
+            <label class="sr-only" for="q">Search products</label>
+            <input class="search__input" id="q" name="q" type="search" placeholder="Search..." autocomplete="off" />
+            <button class="search__btn" type="submit" aria-label="Search">⌕</button>
+          </form>
+
+          <div class="nav__actions-row">
+            <button class="icon-btn" type="button" aria-label="Toggle theme" data-theme-toggle>
+              <span class="icon-btn__icon" aria-hidden="true">◐</span>
+            </button>
+
+            <a class="icon-btn" href="./wishlist.html" aria-label="Wishlist">
+              <span class="icon-btn__icon" aria-hidden="true">♡</span>
+              <span class="badge" data-wishlist-count>0</span>
+            </a>
+
+            <a class="icon-btn" href="./cart.html" aria-label="Cart">
+              <span class="icon-btn__icon" aria-hidden="true">🛒</span>
+              <span class="badge" data-cart-count>0</span>
+            </a>
+
+            <a class="btn btn--ghost nav__auth" href="./login.html" data-auth-link>Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wishlist">
+    <section class="wishlist__top">
+      <div class="container wishlist__top-inner">
+        <div>
+          <h1 class="wishlist__title">Wishlist</h1>
+          <p class="wishlist__subtitle">Save your favorites and move them to cart anytime.</p>
+        </div>
+
+        <div class="wishlist__top-actions">
+          <a class="btn btn--outline" href="./shop.html">Continue Shopping</a>
+          <button class="btn btn--outline" type="button" data-clear-wishlist>Clear Wishlist</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wishlist__content">
+      <div class="container">
+        <div class="grid grid--products" data-wishlist-grid></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-wrap" aria-live="polite" aria-atomic="true" data-toast-wrap></div>
+  <button class="backtop" type="button" aria-label="Back to top" data-backtop>↑</button>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/wishlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product | UrbanWear</title>
+  <meta name="description" content="UrbanWear product details." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/product.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <!-- Header (same as others) -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="./index.html" aria-label="UrbanWear Home">
+        <span class="logo__mark">Urban</span><span class="logo__wear">Wear</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false" data-nav-toggle>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu" data-nav-menu>
+        <div class="nav__menu-head">
+          <strong class="nav__menu-title">Menu</strong>
+          <button class="nav__close" type="button" aria-label="Close menu" data-nav-close>✕</button>
+        </div>
+
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="./index.html">Home</a></li>
+          <li><a class="nav__link" href="./shop.html">Shop</a></li>
+          <li><a class="nav__link" href="./shop.html?category=New">New Arrivals</a></li>
+          <li><a class="nav__link" href="./shop.html?category=Best">Best Sellers</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <form class="search" role="search" action="./shop.html" method="get">
+            <label class="sr-only" for="q">Search products</label>
+            <input class="search__input" id="q" name="q" type="search" placeholder="Search..." autocomplete="off" />
+            <button class="search__btn" type="submit" aria-label="Search">⌕</button>
+          </form>
+
+          <div class="nav__actions-row">
+            <button class="icon-btn" type="button" aria-label="Toggle theme" data-theme-toggle>
+              <span class="icon-btn__icon" aria-hidden="true">◐</span>
+            </button>
+
+            <a class="icon-btn" href="./wishlist.html" aria-label="Wishlist">
+              <span class="icon-btn__icon" aria-hidden="true">♡</span>
+              <span class="badge" data-wishlist-count>0</span>
+            </a>
+
+            <a class="icon-btn" href="./cart.html" aria-label="Cart">
+              <span class="icon-btn__icon" aria-hidden="true">🛒</span>
+              <span class="badge" data-cart-count>0</span>
+            </a>
+
+            <a class="btn btn--ghost nav__auth" href="./login.html" data-auth-link>Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="product">
+    <!-- Breadcrumb -->
+    <section class="product__crumbs">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a class="crumbs__link" href="./index.html">Home</a>
+          <span class="crumbs__sep">/</span>
+          <a class="crumbs__link" href="./shop.html">Shop</a>
+          <span class="crumbs__sep">/</span>
+          <span class="crumbs__current" data-bc-name>Product</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Product details -->
+    <section class="product__main">
+      <div class="container product__layout">
+        <!-- Gallery -->
+        <div class="gallery" aria-label="Product gallery">
+          <div class="gallery__main" data-gallery-main>
+            <!-- JS inserts main image -->
+          </div>
+          <div class="gallery__thumbs" data-gallery-thumbs>
+            <!-- JS inserts thumbs -->
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="info" aria-label="Product info">
+          <div class="info__top">
+            <div class="info__tags" data-tags></div>
+            <h1 class="info__title" data-name>Loading…</h1>
+            <div class="info__meta">
+              <span class="rating" data-rating>
+                <span class="rating__star">★</span><span>0.0</span>
+              </span>
+              <span class="info__dot">•</span>
+              <span class="muted" data-category></span>
+            </div>
+          </div>
+
+          <div class="info__price-row">
+            <span class="info__price" data-price></span>
+            <span class="info__stock">In stock</span>
+          </div>
+
+          <p class="info__desc" data-desc></p>
+
+          <!-- Size selector -->
+          <div class="info__block">
+            <div class="info__label-row">
+              <h2 class="info__label">Size</h2>
+              <p class="info__hint" data-size-hint>Select a size</p>
+            </div>
+            <div class="size" data-sizes></div>
+          </div>
+
+          <!-- Qty selector -->
+          <div class="info__block">
+            <h2 class="info__label">Quantity</h2>
+            <div class="qty">
+              <button class="qty__btn" type="button" aria-label="Decrease" data-qty-dec>−</button>
+              <input class="qty__input" type="number" min="1" value="1" inputmode="numeric" data-qty />
+              <button class="qty__btn" type="button" aria-label="Increase" data-qty-inc>+</button>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="info__actions">
+            <button class="btn btn--primary" type="button" data-add-cart>Add to Cart</button>
+            <button class="btn btn--outline" type="button" data-add-wishlist>♡ Wishlist</button>
+          </div>
+
+          <!-- Details -->
+          <details class="details" open>
+            <summary class="details__sum">Product Details</summary>
+            <ul class="details__list" role="list">
+              <li>Luxury minimal finish</li>
+              <li>Premium materials</li>
+              <li>Easy returns within 7 days</li>
+              <li>Secure checkout</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related products -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__head section__head--row">
+          <div>
+            <h2 class="section__title">Related Products</h2>
+            <p class="section__desc">More picks you’ll love in a similar vibe.</p>
+          </div>
+          <a class="link" href="./shop.html">View all</a>
+        </header>
+
+        <div class="grid grid--products" data-related></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-wrap" aria-live="polite" aria-atomic="true" data-toast-wrap></div>
+  <button class="backtop" type="button" aria-label="Back to top" data-backtop>↑</button>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/product.js"></script>
+</body>
+</html>
