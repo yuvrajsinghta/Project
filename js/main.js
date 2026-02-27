@@ -1,3 +1,5 @@
+console.log("MAIN JS LOADED");
+
 import { PRODUCTS } from "./data.js";
 import { qs, qsa, STORAGE_KEYS, readJSON, writeJSON, getCartCount, getWishlistCount, formatINR, toast } from "./utils.js";
 
